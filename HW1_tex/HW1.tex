@@ -1,0 +1,408 @@
+\documentclass[12 pt]{article}
+
+\usepackage{type1cm}
+\usepackage{enumitem}
+\usepackage{physics} 
+\usepackage{enumerate}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{tikz,pgfplots}
+\usepackage{graphicx}
+\usepackage{float} 
+\usepackage{subfigure}
+\usepackage[toc,page]{appendix}
+\usepackage{amsmath}  %I added this so that you can use the align tool for equations!
+\usepackage{wasysym} %This package allows you to put emojis in your paper!!!!
+%wasysym: \smiley{} \frownie{} see http://milde.users.sourceforge.net/LUCR/Math/mathpackages/wasysym-symbols.pdf for list of most symbols available in this package
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{color}
+
+\geometry{
+  a4paper,
+  total = {170mm, 257mm},
+  left = 20mm,
+  top = 20mm,
+  }
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame = tb,
+        language = Python,
+        aboveskip = 3mm,
+        belowskip = 3mm,
+        showstringspaces = False,
+        columns = flexible,
+        basicstyle = {\small\ttfamily},
+        numbers = left,
+        numberstyle = \tiny\color{gray},
+        keywordstyle = \color{blue},
+        commentstyle = \color{dkgreen},
+        stringstyle = \color{mauve},
+        breaklines = true,
+        breakatwhitespace = true,
+        tabsize=3}
+% \fontsize{20 pt}{20 pt}\selectfont
+\pgfplotsset{compat = 1.14}
+%%%%%%%%%%%%%%%%%%%%%%%%% Again, Don't change anything Above %%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title{\textbf{{\normalsize Mathematical Physics Final Report}
+                \\\emph{Poisson Noise}}}
+\author{108000204
+        \\\emph{Yuan-Yen Peng}
+        \\\emph{Dept.\ of Physics, NTHU}}
+\date{\today}
+\maketitle
+
+\begin{abstract} 
+
+  In this project, we want to demonstrate how the photons received by the CMOS\@; also find the Poisson noise (positive bound) and its Gaussian approach act on different brightness images. Using the synthetic images and real photographs, we conclude two outcomes. One is that the Poisson noise is small and signal-independent; the other is that we can use the large number limit by applying normal random variables to approximate the total noise fluctuations.
+    
+\end{abstract}
+
+\section{Introduction}
+	 
+  Poisson noise is also called shot noise. It originates from the particle nature of photons or electrons; i.e., the discrete photons, etc. In this report, I will use photon to introduce this topic.
+  
+  First of all, we consider how the image appears in the receiver (CMOS). Photons that originate from the light source will appear in evident patterns on the CMOS and if the receiver receives more photons the gray scale value, from white to black gray scale will control the value from 0 to 255,  and will be more significant. What CMOS observed is the expectation value of a bunch of beam lights, not the exact number of photons; therefore, there will be signal fluctuations. These fluctuations are associated with the average photon number, which we call noise.
+  
+  In the class and self-reading section, we have learned the Poisson distribution and the Poisson process. If the series of events follows the Poisson process, it is necessary to comply with this 
+  
+  \begin{description}[style=unboxed, leftmargin = 36 pt, labelindent = 24 pt]
+      \item[$\bullet$] Whole events are discrete.
+      \item[$\bullet$] The number of events that occur in two mutually exclusive time intervals is an independent random variable.
+      \item[$\bullet$] If the time interval is larger, the number of events is more probable to happen.
+      \item[$\bullet$] For an infinitesimal time interval, the number of events is pretty hard to happen.
+      \[P(t, \Delta t)=\lambda \Delta +\mathcal{O}(\Delta t)\]
+      \item[$\bullet$] Two events cannot occur at the same time.
+      \item[$\bullet$] There is no event in the begin, $N_0 = 0$.
+      \item[$\bullet$]The average rate (events per time period) $\lambda$ is constant.
+  \end{description}
+
+\section{Methodology}
+    
+  methodology
+
+\section{Numerical Results}
+
+Result
+
+    \noindent This is the code for finding the rate of the Poisson process. The first part is the probe and tag method to find a suitable position; the second part is to calculate the rate:
+
+    \begin{lstlisting}[language={Python}]
+        # Python 
+    PYTHON SCRIPT
+	  \end{lstlisting}
+
+    % \begin{figure}[H]
+    %     \centering 
+    %     \includegraphics[width = 0.85\textwidth]{Real_cat_compare1.png}
+    %     \caption{It is exposed $t = 100s$ cat photo. On the left is a raw exposed image; the right is the smeared noise image (Poisson algorithm). Here, the time interval between each loop of the algorithm about how gray it is is set to be $1s$.}
+    %     \label{ReCatGray100}
+    % \end{figure}
+
+    % \begin{figure}[H]
+    %     \centering 
+    %     \includegraphics[width = 0.85\textwidth]{Real_cat_compare1.png}
+    %     \caption{It is exposed $t = 10s$ cat photo. On the left is a raw exposed image; the right is the smeared noise image (Poisson algorithm). Here, the time interval between each loop of the algorithm about how gray it is is set to be $1s$.}
+    %     \label{ReCatGray10}
+    % \end{figure}
+
+
+\section{Analysis}
+
+Analysis
+
+\section{Conclusion}
+
+Conslusion
+
+\section*{Appendix}
+The essential code I have written in the methodology. The total codes are a little while too long, so I paste the link (Google CoLab) below. In the link I have annotated some explanations, please check, thanks!
+
+\noindent MP project Poisson noise LINK:\@ \emph{https://reurl.cc/1ZOlxV}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is the Bibliography where you will cite your sources used in the paper %%%%
+
+\begin{thebibliography}{0}
+
+	%Each item starts with a \bibitem{} command and the details thereafter.
+	
+    \bibitem{1} Quick facts \#3: Poisson noise, https://reurl.cc/XjR2v3
+    \bibitem{2} Changing the contrast and brightness of an image!-Theory, https://reurl.cc/Lm5aWK
+    \bibitem{3} Gaussian Approach to Poisson Noise-Adding Poisson noise to an image, \emph{slack overflow}, answer from \emph{Vimieiro}, edited by \emph{BOT}.
+    \bibitem{4} Shot noise, Wikipedia, https://reurl.cc/ZAN4Xg
+    \bibitem{5} Shot Noise, \emph{sunny lee}, https://reurl.cc/NAb9Vn 
+        
+    %%% The 1,2 etc. are used to cite in text. See up in the intro for an example
+    %%% When you want to cite in your cite, type in \cite{} wherever you want
+    
+\end{thebibliography}
+
+\begin{align} 
+  K &= U_g \\
+  mgh &=\frac{1}{2}mv^2 \\
+  (10)(.225) &=\frac{1}{2}v^2 \nonumber \\
+  4.5 &=v^2 \nonumber \\
+  2.12 \frac{m}{s} &=v 
+\end{align}
+
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+
+%%%%%%%%%%Here is a sample bulleted list that is often useful for the materials section. You can also number or letter your materials to easily refer to them later on
+% \begin{description}
+%   \item[$\bullet$] 61cm ramp
+%   \item[$\bullet$] stack of textbooks
+% \end{description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% %%%%%Here is a nice sample data table%%%%%%%%%%
+% \begin{center}
+% \begin{tabular}{|c|c|c|c|c|} %this specifies how many columns to make. For example. if you only wanted three columns, it would look like this : {|c|c|c|}
+% \hline
+% Angle of incline & Trial 1 (Sec.) & Trial 2 (Sec.) & Trial 3 (Sec.) & Average Time (Sec.)\\[0.5ex] %Title for each column
+% \hline\hline
+% $2^{\circ}$&$2.615$&$2.73$5&$2.585$&$2.645$\\ %data for row 1
+% \hline
+% $4^{\circ}$&$1.8$&$1.875$&$1.685$&$1.787$\\ %data for row 2
+% \hline
+% $6^{\circ}$&$1.445$&$1.39$&$1.44$&$1.425$\\ %data for row 3
+% \hline
+% 8$^{\circ}$&1.195&1.31&1.1&1.202\\ %data for row 4
+% \hline
+% \end{tabular}
+% \end{center} 
+ 
+% When making a table, make sure every data point is separated by $ to signify a different cell in your table. To end a row, use the \\ to move to the next row. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%    Using Graphs/pictures in LaTeX    %%%%%%%%%%%%%%%%%%%%%%%%%%
+%In this section you will find the code for inserting a graph into LaTeX. My suggestion is to use excel to create your graph, so that you can include trend lines, error bars (set to 2 sigma standard deviation or to a set amount, e.g. 0.2s to include roughly for human error effects due to timing. You can also use excel to plot experimental data (with error bars) and theoretical data, which allows you to easily see if the theoretical data falls within the region of acceptable error. 
+
+%Once your graph is created, take a screen shot using print screen (prt scn on most computers). Paste into paint and crop out your graph and save as a jpg or png file. Title your picture as something simple to reference later, for example "graph1"
+
+%You will then click the "project" tab in the upper left-hand corner of overleaf, click the drop-down arrow "main.tex" and click upload to upload your picture. From there, use the code below to insert the picture into your report. 
+
+%technique #1: Basic way
+%\includegraphics[width=\textwidth]{YOUR-FILE-NAME-HERE}
+
+%technique #2: slightly more advanced way which allows formatting, sizing, cen
+
+%\begin{figure}[h!]
+ % \caption{A picture of a gull.}
+  %\centering
+  %\includegraphics[width=0.5\textwidth]{Image File Name}
+%\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Here are some sample equations showing how to use the align tool to number and align math in your report
+
+% \begin{align} %Note that in align, you are in "math mode" and thus you don't need the $ between your math
+% K &= U_g \\
+% mgh &=\frac{1}{2}mv^2 \\
+% (10)(.225) &=\frac{1}{2}v^2 \nonumber \\  %by using \nonumber, you can take off the label on the side of an equation, which is nice so that steps of math with work aren't numbered. It is entirely your choice if you want to use this or not. 
+% 4.5 &=v^2 \nonumber \\
+% 2.12 \frac{m}{s} &=v 
+% \end{align}
+%The align tool allows you to number your equations, which is super useful for referencing math in your work. I.e. you could say "see equation (1) for details." 
+
+%Note: the \\ is to make a new line. Whatever you want aligned, just use & to the left, for example see the = above. Finally, don't use \\ on the last line or it will create a blank bottom equation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%~~~~may the f=ma be with you!~~~~~~~~Mr. C 
+
+
+
+%%%%%%%%%%% Here is how to include a picture in your report   %%%%%%%%%%%%%%%%%%%%%
+% \includegraphics[width=.3\textwidth]{Picture13}
+% In this example, Picture2.png is the name of the picture file. For every picture that you want, you first have to save the picture to your computer, then give it a name like Picture2.png 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Here are some equations and other useful things, feel free to copy and paste into your lab report :) %
+
+% Note: It is super easy to look up equations/constants already formatted in LaTeX online. Here are a few websites I like to use:
+
+% LaTeX Tutorial: http://pages.physics.cornell.edu/sps/pages/resources/latex.html
+	%NOTE: This contains both pdf and text (code) of each document, which includes guides, lab 			report templates, and lots of other good stuff!
+
+% LaTeX Cheat Sheet: http://wch.github.io/latexsheet/
+
+% Equations: http://www.equationsheet.com/sheets/Equations-5.html
+
+% Constants, symbols, letters, etc:  http://www.rpi.edu/dept/arc/training/latex/LaTeX_symbols.pdf
+
+% AP Physics Calculus Reference Table: https://secure-media.collegeboard.org/digitalServices/pdf/ap/physics-c-tables-and-equations-list.pdf
+
+% AP Physics Trig Reference Table: https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-physics-1-equations-table.pdf
+
+% Regents Physics Reference Table: http://www.p12.nysed.gov/assessment/reftable/physics-rt/physics06tbl.pdf
+
+% Here are three good sources to use other then this for considering how to write a good lab report. Much of this guide was gleaned from them
+	
+    %http://web.mit.edu/8.13/www/Samplepaper/simple-zipped/simple-paper.pdf 				-MIT Physics Lab (really, really good template!) 
+    
+    % http://pages.physics.cornell.edu/sps/pages/resources/LatexSession/Exercises/LabReport.pdf -Cornell Template
+    % https://engineering.purdue.edu/ME588/LabManual/report_format.pdf 							-Purdue Engineering Template 
+    % http://physics.columbia.edu/files/physics/content/1291_report_format_and_example.pdf 		-Columbia University Template
+    % https://www.baylor.edu/physics/doc.php/110769.pdf											-Baylor University Template
+    % www.nd.edu/~hgberry/Fall2012/Guidelines.docx												-Notre Dame Template
+    %http://www.esf.edu/iq/colloquium/documents/LabReportnotes.pdf								-SUNY ESF Template
+    %http://writing.engr.psu.edu/workbooks/laboratory.html										-Virginia Tech Template
+    %https://projects.ncsu.edu/labwrite/index_labwrite.htm										-SUPER in-depth guide to writing lab reports
+    
+    %https://gist.github.com/dcernst/1827406													-Template for completing Math homework in LaTeX
+    %https://joshldavis.com/2014/02/12/doing-your-homework-in-latex/							-More about math homework in LaTeX
+    
+        
+%Purdue University Online Writing Lab-OWL: https://owl.english.purdue.edu/ Use this to generate citations!
+
+%Basically, if you get stuck, just google "Latex ______" for whatever you need and look through the LaTeX stackexchange or wiki article to find and copy/paste what you need
+
+
+%	Here are some common equations we use in class. I will continue to update as we continue throughout the year. I will attempt to organize by the order we learn the topics from oldest at the top to newest at the bottom. Go ahead and copy/paste as needed in your report
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Basic Calculus %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%		   $$\frac{\mathrm{d}}{\mathrm{d}x}C=0$$
+%           $$\frac{\mathrm{d}}{\mathrm{d}x}Cx=C$$
+%           $$\frac{\mathrm{d}}{\mathrm{d}x}x=1$$           
+%           $$\frac{\mathrm{d}}{\mathrm{d}x}x^n = nx^{n-1} $$  	-power rule
+% 		   $$\frac{\mathrm{d}}{\mathrm{d}x}fg= fg'+f'g$$		-product rule
+%           $$\frac{\mathrm{d}}{\mathrm{d}x}f(g(x))=f'(g(x))g'(x)$$	-chain rule
+%           $$\frac{\mathrm{d}}{\mathrm{d}x} \sin{x} = \cos{x}$$	
+%           $$\frac{\mathrm{d}}{\mathrm{d}x} \cos{x} = -\sin{x}$$
+           
+%           $$\int k \mathrm{d}x = kx+C$$		-integral of a constant
+%           $$\int x^n \mathrm{d}x= \frac{1}{n+1}x^{n+1}+C$$	-power rule for integrals
+%           $$\int \cos{u}\mathrm{d}u = \sin{u} + C$$	
+%           $$\int \sin{u}\mathrm{d}u = -cos{u} + C$$	
+
+% see https://reu.dimacs.rutgers.edu/Symbols.pdf for a nice list of math LaTeX symbols
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Kinematics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%			$$\bar{v}=\frac{d}{t}$$ 								-average speed
+%			$$v=\frac{\mathrm{d}x}{\mathrm{d}t}$$					-instantaneous velocity definition
+%			$$a=\frac{\mathrm{d}v}{\mathrm{d}t}$$					-instantaneous acceleration definition
+%			if acceleration is constant, then:
+%				$${x_f}={x_i}+{v_i}t+\frac{1}{2}a{t^2}$$  			-free-fall equation
+%				$${v_f}={v_i}+at$$									-find new velocity
+%				$${{v_f}^2}={{v_i}^2}+2a({x_f}-{x_i})$$				-equation without time
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Newton's Laws %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%			$$F_{net}=ma=m\frac{\mathrm{d}v}{\mathrm{d}t}=m\frac{\mathrm{d}^{2}x}{\mathrm{d}{t^2}}$$	-Newt's 2nd Law
+%			$$F_f=\mu F_n$$											-Friction 
+%			$$w=mg$$												-Weight
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Work, Power, Energy %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%			$$W=\Delta E = \int F dx = Fd  \hspace{3pt} \text{(if F constant)} $$ 	-Work-Energy Theorem
+%			$$Power=\frac{\mathrm{d}E}{\mathrm{d}t}=\frac{\mathrm{d}W}{\mathrm{d}t} = \frac{Fd}{t} = F \bar{v}$$		-Power
+%			$$K=\frac{1}{2}mv^2$$													-Kinetic Energy
+%			$$U_g=mgh$$																-Gravitational Potential Energy
+%			$$U_e=\frac{1}{2}kx^2$$													-Spring Potential Energy
+%			$$F_e=kx$$																-Hooke's Law
+%			$$F=-\frac{\mathrm{d}U}{\mathrm{d}x}$$									-Force is derivative of Potential
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Momentum, Center of Mass %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 			$$p=mv$$								-definition of momentum
+%			$$F=\frac{\mathrm{d}p}{\mathrm{d}t}
+%			$$ft=\Delta{p}$$ 						-trig version of impulse momentum theorem
+%			$$J=\int F \mathrm{d}t = \Delta{p}$$	-calc version of impulse momentum theorem
+%			$$p_{before}=p_{after}$$				-Conservation of Momentum
+%			$$X_{c.o.m}=\frac{\Sigma x_i m_i}{M}$$  -x-coordinate of Center of Mass
+%       	$$Y_{c.o.m}=\frac{\Sigma y_i m_i}{M}$$  -y-coordinate of Center of Mass
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Rotational Kinematics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%		$$\omega=\frac{\mathrm{d}\theta}{\mathrm{d}t}$$ 			-definition of angular speed (rad/sec)
+%		$$\alpha=\frac{\mathrm{d}\omega}{\mathrm{d}t}=\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}$$ 			-definition of angular acceleration
+%		$$v=r\omega$$												-angular/linear velocity connection
+%		$$S=r \theta$$												-arc length/angle connection
+%		if angular acceleration is constant, then:
+%			$$\omega_f=\omega_i+\alpha t$$   	-find angular velocity
+%			$$\theta=\theta_i + \omega_i t + \frac{1}{2} \alpha t^2$$ 		-angular "free-fall" equation
+%			$${\omega_f}^2 = {\omega_i}^2 + 2\alpha(\theta_f - \theta_i)$$ 	-angular equation w/o time
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Rotational Dynamics + Gravitation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%		$$\tau=r \times F = rF\sin{\theta}$$			-definition of torque
+%		$$\tau = I \alpha$$								-Newt's 2nd Law for Rotation
+%		$$a_c = v^{2}/r = {\omega^2}r$$					-centripetal acceleration
+%		$$F_c=ma_c = m{\omega^2}r$$						-centripetal force
+%		$$I=\int r^2 \mathrm{d}m = \Sigma m r^2$$		-Calculate Moment of Inertia of an Object
+%		$$K_r=\frac{1}{2}I{\omega^2}$$					-Rotational Kinetic Energy
+%		$$L= I\omega = r \times p = rp\sin{\theta}$$	-Angular Momentum
+%		$$L_{before}=L_{after}$$						-Conservation of Angular Momentum
+
+%		$$F_g = \frac{\text{G}m_1 m_2}{r^2}$$			-Newton's Law of Universal Gravitation
+%		$$U_g= -\frac{\text{G}m_1 m_2}{r}$$				-Gravitational Potential Energy
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Vibrations, Simple Harmonic Motion, Sound %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+%		$$v=f\lambda$$								-speed of a wave
+%		$4T=\frac{2\pi}{\omega}=\frac{1}{f}$$		-period of a wave
+%		$$x(t)=x_{max}\cos{(\omega t + \phi)}$$	    -wave equation
+%		$$T_s=2\pi\sqrt{\frac{m}{k}}$$				-Period of an oscillating spring
+%		$$T_p=2\pi\sqrt{\frac{l}{g}}$$				-Period of a Pendulum
+%		$$\frac{\mathrm{d}^2 \smiley{}}{{dt}^2} - {\omega}^2 \smiley{} = 0$$ 	-General Simple Harmonic Motion Equation
+%		
+		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fluid Mechanics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%		$$\rho=m/V$$						-Density
+%		$$P=F/A$$							-Definition of Pressure
+%		$$P=P_i+\rho gh	$$					-Pressure change as a function of depth
+%		$$\rho_1A_1v_1=\rho_2A_2v_2$$		-Continuity Equation for fluid flow
+%		$$F_b=\rho gV_{displaced}$$			-Archimedes Principle
+%		$$P_1+\frac{1}{2}\rho v_1^2 +\rho gh_1 = P_2+\frac{1}{2}\rho v_2^2 +\rho gh_2 $$ -Bernoulli Equation
+%		
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Thermodynamics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%		$$\frac{\Delta Q}{\Delta t} = \frac{k A \Delta T}{l}$$ 		-Conduction Equation
+%		$$Q = mc \Delta T$$											-Heat Flow Equation (sensible heat)
+%		$$Q=mL_f$$													-Latent Heat of Fusion
+%		$$Q=mL_v$$													-Latent Heat of Vaporization
+%		$$ \Delta l = \alpha l_0 \Delta T$$							-Length expansion
+%		$$ \Delta A = 2 \alpha A_0 \Delta T$$						-Area expansion
+%		$$ \Delta V = 3 \alpha V_0 \Delta T$$						-Volume Expansion
+%       $$PV=Nk_BT$$												-Ideal Gas Law
+%		$$K=\frac{n}{2}k_BT$$										-Equipartition Theorem
+			%if Ideal Gas:
+            	% then $$K=\frac{3}{2}k_BT$$
+%		$$W=-\int P \mathrm{d}V										-Thermodynamic Work on a gas (calc)
+%		$$W=-P \DeltaV$$											-Thermodynamic Work on a gas Equation-trig
+%		$$\Delta U= Q+W$$											-1st Law of Thermodynamics
+%		$$\epsilon_{real} = 1- \frac{Q_c}{Q_h}$$					-Real Efficiency 
+%       $$\epsilon_{theory} = 1- \frac{T_c}{T_h}$$					-Theoretical "Carnot" efficiency
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Misc. Useful Things %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% \framebox{box}  This puts a box around something. Good for showing something important
+% to quote someone, use the following template:
+	%\begin{quotation}
+	%``You miss 100\% of the shots you never take'' %note that quotes are formatted this way in LaTeX
+	%-Michael Scott
+	%\end{quotation}
+
+
+
+% https://physics.info/equations/ is a good source for most common equations found in introductory physics (trig and calc based)

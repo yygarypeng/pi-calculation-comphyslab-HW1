@@ -1,0 +1,7 @@
+#This is .gitignore which use to ignore some unwanted files to let git to detect.
+
+**/*.ipynb_checkpoints/
+.vscode
+.DS_Store
+*.tmp
+.gitignore # It must ignore itself
